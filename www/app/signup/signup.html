@@ -1,0 +1,33 @@
+<ion-view title="Sign up">
+    <ion-content padding="true" class="has-header">
+        <form name="signupForm" ng-submit="signup(signupForm.$valid)" novalidate>
+            <ion-list>
+                <label class="item item-input">                    
+                    <input name="name" type="text" placeholder="Name" ng-model="user.name" required>
+                </label>
+                <div class="error" ng-show="(signupForm.name.$dirty || submitted) && signupForm.name.$invalid">Name is required.</div>
+
+                <label class="item item-input">                    
+                    <input name="email" type="email" placeholder="Email" ng-model="user.email" required>
+                </label>
+                <div class="error" ng-show="(signupForm.email.$dirty || submitted) && signupForm.email.$invalid">Email is required.</div>
+
+                <label class="item item-input">                    
+                    <input name="userName" type="text" placeholder="User name" ng-model="user.userName" required>
+                </label>
+                <div class="error" ng-show="(signupForm.userName.$dirty || submitted) && signupForm.userName.$invalid">User name is required.</div>
+
+                <label class="item item-input">                    
+                    <input name="password" type="password" placeholder="Password" ng-model="user.password" required>
+                </label>
+                <div class="error" ng-show="(signUpForm.password.$dirty || submitted) && signupForm.password.$invalid">Password is required.</div>
+                
+                <select style="width: 100%; margin-top: 10px;" ng-model="user.language">
+                    <option value="en-EN">English</option>
+                    <option value="nb-NO">Norwegian</option>                      
+                </select>
+            </ion-list>
+            <button type="submit" class="button button-positive button-block">Sign up</button>            
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view view-title="Students" ng-init="init()" cache-view="false">
+ 	<ion-content>
+ 		<ion-list>
+	      	<ion-item class="item-avatar item-icon-right" ng-repeat="student in students" ng-click="go({{student.id}})">
+		      	<img ng-src="{{student.photo}}">
+		        <h2>{{student.name}}</h2>
+		        <p>{{student.status}} {{student.points}}</p>
+		        <i class="icon ion-chevron-right icon-accessory"></i>
+	      	</ion-item>
+    	</ion-list>
+  	</ion-content>
+</ion-view>

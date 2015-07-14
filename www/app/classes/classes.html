@@ -1,0 +1,10 @@
+<ion-view view-title="Classes" cache-view="false">
+ 	<ion-content>
+ 		<ion-list>
+	      	<ion-item class="item-icon-right" ng-repeat="class in classes" href="#/app/students/{{class.id}}">
+		        <h2>{{class.name}}</h2>
+		        <i class="icon ion-chevron-right icon-accessory"></i>
+	      	</ion-item>
+    	</ion-list>
+  	</ion-content>
+</ion-view>

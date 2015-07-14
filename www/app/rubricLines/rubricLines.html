@@ -1,0 +1,47 @@
+<ion-view view-title="Rubric" cache-view="false">
+ 	<ion-content>
+      	<div ng-repeat="rubricLine in rubricLines">
+	      	<div class="card">
+	      		<table class="table table-bordered table-striped">
+        			<tbody>
+					    <tr>
+					        <th></th>
+					        <th>Description</th>
+					        <th>Review</th>
+					        <th>Feedback</th>					     
+					        <th></th>   
+					    </tr>
+			            <tr ng-click="go({{rubricLine.id}}, '/app/rubricScore/r/{{rubricLine.r.id}}')">
+			            	<td>R</td>
+			                <td>{{rubricLine.r.description}}</td>
+			                <td>{{rubricLine.r.review}}</td>
+			                <td>{{rubricLine.r.feedback}}</td>
+			                <td><a class="icon ion-edit"></a></td>
+			            </tr>
+			            <tr ng-click="go({{rubricLine.id}}, '/app/rubricScore/t2/{{rubricLine.t1.id}}')">
+			            	<td>T1</td>
+			                <td>{{rubricLine.t1.description}}</td>
+			                <td>{{rubricLine.t1.review}}</td>
+			                <td>{{rubricLine.t1.feedback}}</td>	
+			                <td><a class="icon ion-edit"></a></td>
+			            </tr>
+			            <tr ng-click="go({{rubricLine.id}}, '/app/rubricScore/t2/{{rubricLine.t2.id}}')">
+			            	<td>T2</td>
+			                <td>{{rubricLine.t2.description}}</td>
+			                <td>{{rubricLine.t2.review}}</td>
+			                <td>{{rubricLine.t2.feedback}}</td>	
+			                <td><a class="icon ion-edit"></a></td>
+			            </tr>
+			            <tr ng-click="go({{rubricLine.id}}, '/app/rubricScore/i/{{rubricLine.t3.id}}')">
+			            	<td>I</td>
+			                <td>{{rubricLine.i.description}}</td>
+			                <td>{{rubricLine.i.review}}</td>
+			                <td>{{rubricLine.i.feedback}}</td>
+			                <td><a class="icon ion-edit"></a></td>
+			            </tr>			            
+        			</tbody>
+    			</table>
+			</div>
+      	</div>
+</ion-view>
+

@@ -1,0 +1,21 @@
+<ion-view title="Log in">
+    <ion-content padding="true" class="has-header">
+        <form name="loginForm" ng-submit="login(loginForm.$valid)" novalidate>
+            <ion-list>
+                <label class="item item-input">
+                    <input name="userName" type="text" placeholder="Username" ng-model="user.name" required>          
+                </label>
+                <div class="error" ng-show="(loginForm.userName.$dirty || submitted) && loginForm.userName.$invalid">User name is required.</div>
+
+                <label class="item item-input">                    
+                    <input name="password" type="password" placeholder="Password" ng-model="user.password" required>
+                </label>
+                <div class="error" ng-show="(loginForm.password.$dirty || submitted) && loginForm.password.$invalid">Password is required.</div>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <button type="submit" class="button button-positive button-block">Log in</button>
+        </form>
+        <a href="#/forgotPassword" class="button button-positive button-clear button-block">Forgot password</a>
+        <a href="#/signup" class="button button-positive button-clear button-block">Create an account</a>
+    </ion-content>
+</ion-view>

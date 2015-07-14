@@ -1,0 +1,26 @@
+<ion-view title="Score" cache-view="false">
+    <ion-content padding="true" class="has-header">
+        <form ng-submit="save()">
+            <ion-list>                
+                <div class="item item-input">
+                    <textarea rows="10" placeholder="Description" ng-model="rubricScore.description"></textarea>
+                </div>
+                <div class="item item-input">
+                    <input type="text" placeholder="Review" ng-model="rubricScore.review">
+                </div>
+                <div class="item item-input">                    
+                    <textarea rows="10" placeholder="Feedback" ng-model="rubricScore.feedback"></textarea>
+                </div>
+                <div class="item item-input" style="padding-left: 0">
+                    <div class="button-bar">
+                        <a class="button button-calm" ng-click="captureImage()">Photo</a>
+                        <a class="button button-calm" ng-click="captureVideo()">Video</a>
+                        <a class="button button-calm" ng-click="captureAudio()">Audio</a>                        
+                    </div>
+                </div>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <button type="submit" class="button button-positive button-block">Save</button>        
+        </form>
+    </ion-content>
+</ion-view>
